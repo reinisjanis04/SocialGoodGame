@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Common Ground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topbar">
+    <div class="brand">Common Ground <small>Northhaven</small></div>
+    <div class="date-wrap"><div id="date">January</div><div class="month-track"><div id="month-bar"></div></div></div>
+    <div id="speed" class="speed"></div>
+    <div id="money" class="money"></div>
+    <div id="ineq" class="ineq"><span>Inequality</span><div class="ineq-track"><div id="ineq-bar"></div></div><b id="ineq-val"></b></div>
+  </header>
+
+  <main>
+    <div id="game">
+      <div id="tooltip" hidden></div>
+      <div id="toasts"></div>
+    </div>
+
+    <aside id="panel">
+      <section>
+        <h3>Districts <small>click a card to look at it</small></h3>
+        <div id="districts"></div>
+      </section>
+      <section>
+        <h3>Build</h3>
+        <div id="build" class="build-grid"></div>
+        <div id="build-hint" class="hint" hidden></div>
+      </section>
+      <section>
+        <h3>Taxes &amp; policies</h3>
+        <div id="taxes"></div>
+      </section>
+      <section>
+        <h3>This year's goals</h3>
+        <div id="goals"></div>
+      </section>
+      <section>
+        <h3>City news</h3>
+        <ul id="news"></ul>
+      </section>
+      <footer class="panel-foot">
+        <button id="btn-help">How to play</button>
+        <button id="btn-csv">Download play data</button>
+        <button id="btn-restart">New game</button>
+      </footer>
+    </aside>
+  </main>
+
+  <div id="modal" hidden></div>
+
+  <script src="vendor/phaser.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sim.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
