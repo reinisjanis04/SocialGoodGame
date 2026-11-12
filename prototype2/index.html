@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Common Ground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topbar">
+    <div class="brand">Common Ground</div>
+    <div class="date-wrap"><div id="date">January</div><div id="year-info" class="year-info"></div><div class="month-track"><div id="month-bar"></div></div></div>
+    <div id="speed" class="speed"></div>
+    <div id="money" class="money"></div>
+    <div class="stat-top" title="Residents of Northhaven"><span>People</span><b id="pop"></b></div>
+    <div class="stat-top" title="Share of the city's power from solar and wind"><span>Clean power</span><b id="clean-val"></b></div>
+    <div id="ineq" class="ineq"><span>Inequality</span><div class="ineq-track"><div id="ineq-bar"></div></div><b id="ineq-val"></b></div>
+  </header>
+
+  <main id="stage">
+    <div id="game"></div>
+
+    <nav id="dock" aria-label="Tools">
+      <button class="dock-btn" data-panel="build" title="Build (B)">
+        <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg><span>Build</span></button>
+      <button class="dock-btn" data-tool="land" title="Buy land (L)">
+        <svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2.5 4L16 12H5"/></svg><span>Land</span></button>
+      <button class="dock-btn" data-panel="policies" title="Taxes and policies (P)">
+        <svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg><span>Policies</span></button>
+      <button class="dock-btn" data-panel="news" title="City news">
+        <svg viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2M7 9h7M7 13h7"/></svg><span>News</span><i id="news-badge" hidden></i></button>
+      <button class="dock-btn" data-panel="menu" title="Menu">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></button>
+    </nav>
+
+    <section id="flyout" hidden>
+      <div class="fly-head"><h3 id="fly-title"></h3><button id="fly-close" aria-label="Close">×</button></div>
+      <div id="fly-body"></div>
+    </section>
+
+    <div id="toolhint" hidden></div>
+
+    <aside id="goalsbox">
+      <button id="goals-head"><span id="goals-title">Goals</span><span id="goals-sum"></span><span class="chev">▾</span></button>
+      <div id="goals-body"><p id="rival" class="rival"></p><div id="goals"></div></div>
+    </aside>
+
+    <div id="districtbar"></div>
+    <div id="tooltip" hidden></div>
+    <div id="toasts"></div>
+  </main>
+
+  <div id="modal" hidden></div>
+
+  <script src="vendor/phaser.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sim.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
